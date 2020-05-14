@@ -48,7 +48,7 @@ qEls.forEach((q, index) => {
         r.textContent =
           String(pricesEls[i].valueAsNumber / e.target.valueAsNumber) == "NaN"
             ? 0
-            : pricesEls[i].valueAsNumber / e.target.valueAsNumber.toFixed(2);
+            : (pricesEls[i].valueAsNumber / e.target.valueAsNumber).toFixed(2);
       }
     });
   });
@@ -61,7 +61,7 @@ pricesEls.forEach((product, index) => {
         r.textContent =
           String(e.target.valueAsNumber / qEls[i].valueAsNumber) == "NaN"
             ? 0
-            : e.target.valueAsNumber / qEls[i].valueAsNumber.toFixed(2);
+            : (e.target.valueAsNumber / qEls[i].valueAsNumber).toFixed(2);
       }
     });
   });
