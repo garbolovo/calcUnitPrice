@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1</title>
+  <meta name="referrer" content="same-origin" />
+  <meta name="viewport" content="width=960" />
+  <style>
+    body {
+      -webkit-text-size-adjust: none;
+    }
+
+    @font-face {
+      font-family: "Baloo Da";
+      src: url("css/BalooDa-Regular.woff2") format("woff2"),
+        url("css/BalooDa-Regular.woff") format("woff");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Advent Pro";
+      src: url("css/AdventPro-Bold.woff2") format("woff2"),
+        url("css/AdventPro-Bold.woff") format("woff");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "ABeeZee";
+      src: url("css/ABeeZee-Regular.woff2") format("woff2"),
+        url("css/ABeeZee-Regular.woff") format("woff");
+      font-weight: 400;
+    }
+
+    body>div {
+      font-size: 0;
+    }
+
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      word-spacing: normal;
+      word-wrap: break-word;
+      -ms-word-wrap: break-word;
+      pointer-events: auto;
+    }
+
+    sup {
+      font-size: inherit;
+      vertical-align: baseline;
+      position: relative;
+      top: -0.4em;
+    }
+
+    sub {
+      font-size: inherit;
+      vertical-align: baseline;
+      position: relative;
+      top: 0.4em;
+    }
+
+    ul {
+      display: block;
+      word-spacing: normal;
+      word-wrap: break-word;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      -moz-padding-start: 0;
+      -khtml-padding-start: 0;
+      -webkit-padding-start: 0;
+      -o-padding-start: 0;
+      -padding-start: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+    }
+
+    li {
+      display: block;
+    }
+
+    li p {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    form {
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .shm-l {
+      float: left;
+      clear: left;
+    }
+
+    .shm-r {
+      float: right;
+      clear: right;
+    }
+
+    .whitespacefix {
+      word-spacing: -1px;
+    }
+
+    html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-size: 0;
+      margin: 0;
+    }
+
+    audio,
+    video {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    audio:not([controls]) {
+      display: none;
+      height: 0;
+    }
+
+    [hidden],
+    template {
+      display: none;
+    }
+
+    a {
+      background: 0 0;
+      outline: 0;
+    }
+
+    b,
+    strong {
+      font-weight: 700;
+    }
+
+    dfn {
+      font-style: italic;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1em;
+      line-height: 1;
+      margin: 0 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    svg:not(:root) {
+      overflow: hidden;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+
+    button {
+      overflow: visible;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    html input[type="button"],
+    input[type="submit"] {
+      -webkit-appearance: button;
+      cursor: pointer;
+      box-sizing: border-box;
+      white-space: normal;
+    }
+
+    input[type="password"],
+    input[type="text"],
+    textarea {
+      -webkit-appearance: none;
+      appearance: none;
+      box-sizing: border-box;
+    }
+
+    button[disabled],
+    html input[disabled] {
+      cursor: default;
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    input {
+      line-height: normal;
+      border-radius: 0;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    input[type="search"] {
+      -webkit-appearance: textfield;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    textarea {
+      overflow: auto;
+      box-sizing: border-box;
+      border-color: #ddd;
+    }
+
+    optgroup {
+      font-weight: 700;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td,
+    th {
+      padding: 0;
+    }
+
+    :-webkit-full-screen-ancestor:not(iframe) {
+      -webkit-clip-path: initial !important;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #b {
+      background: #fff url(images/use_your_illusion.png) repeat center top;
+    }
+
+    .v {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      vertical-align: top;
+    }
+
+    .ps {
+      position: relative;
+      margin-top: 1px;
+    }
+
+    .s {
+      width: 100%;
+      min-width: 960px;
+      min-height: 84px;
+    }
+
+    .c {
+      z-index: 1;
+      pointer-events: none;
+      border: 0;
+      background-image: url(images/untitled-5616.jpg);
+      background-color: #0a77f4;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-clip: padding-box;
+    }
+
+    .ps2 {
+      position: relative;
+      margin-top: 42px;
+    }
+
+    .v2 {
+      display: block;
+      *display: block;
+      zoom: 1;
+      vertical-align: top;
+    }
+
+    .s2 {
+      pointer-events: none;
+      min-width: 960px;
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .v3 {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      vertical-align: top;
+      overflow: hidden;
+    }
+
+    .ps3 {
+      position: relative;
+      margin-left: 210px;
+      margin-top: 0;
+    }
+
+    .s3 {
+      min-width: 440px;
+      width: 440px;
+      min-height: 70px;
+      height: 70px;
+    }
+
+    .c2 {
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .p {
+      padding-top: 0;
+      text-indent: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    .f {
+      font-family: "Baloo Da";
+      font-size: 34px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #0a77f4;
+      background-color: initial;
+      line-height: 57px;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    .s4 {
+      min-width: 447px;
+      width: 447px;
+      min-height: 46px;
+    }
+
+    .ps4 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    .s5 {
+      min-width: 131px;
+      width: 131px;
+      min-height: 46px;
+      height: 46px;
+    }
+
+    .c4 {
+      z-index: 4;
+      pointer-events: auto;
+    }
+
+    .f2 {
+      font-family: "Baloo Da";
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #0a77f4;
+      background-color: initial;
+      line-height: 43px;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    .ps5 {
+      position: relative;
+      margin-left: 4px;
+      margin-top: -46px;
+    }
+
+    .s6 {
+      min-width: 443px;
+      width: 443px;
+      min-height: 46px;
+    }
+
+    .w {
+      line-height: 0;
+    }
+
+    .ps6 {
+      position: relative;
+      margin-left: 137px;
+      margin-top: 0;
+    }
+
+    .s7 {
+      min-width: 303px;
+      width: 303px;
+      min-height: 46px;
+    }
+
+    .s8 {
+      min-width: 129px;
+      width: 129px;
+      min-height: 45px;
+      height: 45px;
+    }
+
+    .c5 {
+      z-index: 11;
+      pointer-events: auto;
+    }
+
+    .ps7 {
+      position: relative;
+      margin-left: 19px;
+      margin-top: 1px;
+    }
+
+    .s9 {
+      min-width: 155px;
+      width: 155px;
+      min-height: 45px;
+      height: 45px;
+    }
+
+    .c6 {
+      z-index: 17;
+      pointer-events: auto;
+    }
+
+    .ps8 {
+      position: relative;
+      margin-left: 0;
+      margin-top: -10px;
+    }
+
+    .s10 {
+      min-width: 443px;
+      width: 443px;
+      min-height: 1px;
+    }
+
+    .c7 {
+      z-index: 21;
+      border: 0;
+      background-color: #b8c8d2;
+    }
+
+    .ps9 {
+      position: relative;
+      margin-left: 169px;
+      margin-top: 11px;
+    }
+
+    .s11 {
+      min-width: 570px;
+      width: 570px;
+      min-height: 428px;
+    }
+
+    .c8 {
+      z-index: 3;
+      border: 0;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      background: #2aa198 url(images/brushed_alu.png) repeat center top;
+    }
+
+    .ps10 {
+      position: relative;
+      margin-left: 33px;
+      margin-top: 37px;
+    }
+
+    .s12 {
+      min-width: 453px;
+      width: 453px;
+      min-height: 285px;
+    }
+
+    .ps11 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 4px;
+    }
+
+    .s13 {
+      min-width: 53px;
+      width: 53px;
+      min-height: 281px;
+    }
+
+    .s14 {
+      min-width: 53px;
+      width: 53px;
+      min-height: 39px;
+      height: 39px;
+    }
+
+    .c9 {
+      z-index: 6;
+      pointer-events: auto;
+    }
+
+    .f3 {
+      font-family: "Advent Pro";
+      font-size: 20px;
+      font-weight: 700;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #000;
+      background-color: initial;
+      line-height: 33px;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    .ps12 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 41px;
+    }
+
+    .c10 {
+      z-index: 13;
+      pointer-events: auto;
+    }
+
+    .c11 {
+      z-index: 10;
+      pointer-events: auto;
+    }
+
+    .ps13 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 43px;
+    }
+
+    .c12 {
+      z-index: 26;
+      pointer-events: auto;
+    }
+
+    .ps14 {
+      position: relative;
+      margin-left: 1px;
+      margin-top: 0;
+    }
+
+    .s15 {
+      min-width: 96px;
+      width: 96px;
+      min-height: 282px;
+    }
+
+    .s16 {
+      min-width: 96px;
+      width: 96px;
+      min-height: 44px;
+      height: 44px;
+    }
+
+    .c13 {
+      z-index: 20;
+      pointer-events: auto;
+    }
+
+    .input {
+      border: 1px solid #c0c0c0;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #fff;
+      width: 96px;
+      height: 44px;
+      font-family: "Baloo Da";
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #000;
+      line-height: 27px;
+      letter-spacing: 0.7px;
+      text-shadow: none;
+      text-indent: 0;
+      padding-bottom: 0;
+      text-align: left;
+      padding: 5px;
+    }
+
+    .ps15 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 37px;
+    }
+
+    .s17 {
+      min-width: 96px;
+      width: 96px;
+      min-height: 40px;
+      height: 40px;
+    }
+
+    .c14 {
+      z-index: 7;
+      pointer-events: auto;
+    }
+
+    .input2 {
+      border: 1px solid #c0c0c0;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #fff;
+      width: 96px;
+      height: 40px;
+      font-family: "Baloo Da";
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #000;
+      line-height: 27px;
+      letter-spacing: 0.7px;
+      text-shadow: none;
+      text-indent: 0;
+      padding-bottom: 0;
+      text-align: left;
+      padding: 5px;
+    }
+
+    .ps16 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    .c15 {
+      z-index: 9;
+      pointer-events: auto;
+    }
+
+    .c16 {
+      z-index: 16;
+      pointer-events: auto;
+    }
+
+    .ps17 {
+      position: relative;
+      margin-left: 20px;
+      margin-top: 0;
+    }
+
+    .s18 {
+      min-width: 96px;
+      width: 96px;
+      min-height: 284px;
+    }
+
+    .c17 {
+      z-index: 5;
+      pointer-events: auto;
+    }
+
+    .ps18 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 35px;
+    }
+
+    .c18 {
+      z-index: 24;
+      pointer-events: auto;
+    }
+
+    .ps19 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 36px;
+    }
+
+    .c19 {
+      z-index: 19;
+      pointer-events: auto;
+    }
+
+    .c20 {
+      z-index: 15;
+      pointer-events: auto;
+    }
+
+    .ps20 {
+      position: relative;
+      margin-left: 31px;
+      margin-top: 5px;
+    }
+
+    .s19 {
+      min-width: 4px;
+      width: 4px;
+      min-height: 280px;
+    }
+
+    .c21 {
+      z-index: 8;
+      border: 0;
+      background-color: #0a77f4;
+    }
+
+    .ps21 {
+      position: relative;
+      margin-left: 21px;
+      margin-top: 4px;
+    }
+
+    .s20 {
+      min-width: 131px;
+      width: 131px;
+      min-height: 280px;
+    }
+
+    .ps22 {
+      position: relative;
+      margin-left: 9px;
+      margin-top: 0;
+    }
+
+    .s21 {
+      min-width: 114px;
+      width: 114px;
+      min-height: 41px;
+      height: 41px;
+    }
+
+    .c22 {
+      z-index: 22;
+      pointer-events: auto;
+    }
+
+    .f4 {
+      font-family: "Baloo Da";
+      font-size: 20px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      color: #000;
+      background-color: initial;
+      line-height: 40px;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    .ps23 {
+      position: relative;
+      margin-left: 0;
+      margin-top: -41px;
+    }
+
+    .s22 {
+      min-width: 129px;
+      width: 129px;
+      min-height: 38px;
+    }
+
+    .c23 {
+      z-index: 12;
+      border: 1px solid #677a85;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #8df900;
+    }
+
+    .ps24 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 39px;
+    }
+
+    .s23 {
+      min-width: 131px;
+      width: 131px;
+      min-height: 41px;
+    }
+
+    .c24 {
+      z-index: 28;
+      pointer-events: auto;
+    }
+
+    .c25 {
+      z-index: 14;
+      border: 1px solid #677a85;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #8df900;
+    }
+
+    .ps25 {
+      position: relative;
+      margin-left: 4px;
+      margin-top: 0;
+    }
+
+    .c26 {
+      z-index: 25;
+      pointer-events: auto;
+    }
+
+    .c27 {
+      z-index: 18;
+      border: 1px solid #677a85;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #8df900;
+    }
+
+    .ps26 {
+      position: relative;
+      margin-left: 0;
+      margin-top: 38px;
+    }
+
+    .c28 {
+      z-index: 27;
+      pointer-events: auto;
+    }
+
+    .c29 {
+      z-index: 23;
+      border: 1px solid #677a85;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #8df900;
+    }
+
+    .v4 {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      vertical-align: top;
+      overflow: hidden;
+      outline: 0;
+    }
+
+    .ps27 {
+      position: relative;
+      margin-left: 87px;
+      margin-top: 25px;
+    }
+
+    .s24 {
+      width: 94px;
+      padding-right: 0;
+      height: 32px;
+    }
+
+    .f5 {
+      font-family: "Baloo Da";
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      line-height: 27px;
+      letter-spacing: 1.1px;
+      text-shadow: none;
+      text-indent: 0;
+      text-align: center;
+      padding-top: 3px;
+      padding-bottom: 2px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .c30 {
+      z-index: 29;
+      pointer-events: auto;
+      border: 1px solid #0a77f4;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.4);
+      color: #0a77f4;
+    }
+
+    .c30:hover {
+      background-color: #0a77f4;
+      border-color: #0a77f4;
+      color: #fff;
+    }
+
+    .c30:active {
+      background-color: #0a77f4;
+      border-color: #0a77f4;
+      color: #fff;
+    }
+
+    .ps28 {
+      position: relative;
+      margin-top: 114px;
+    }
+
+    .s25 {
+      width: 100%;
+      min-width: 960px;
+      min-height: 110px;
+    }
+
+    .c31 {
+      z-index: 30;
+      pointer-events: none;
+      border: 0;
+      background: #0a77f4 url(images/low_contrast_linen.png) repeat center top;
+    }
+
+    .ps29 {
+      position: relative;
+      margin-top: 41px;
+    }
+
+    .s26 {
+      min-width: 960px;
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ps30 {
+      position: relative;
+      margin-left: 421px;
+      margin-top: 0;
+    }
+
+    .s27 {
+      min-width: 138px;
+      width: 138px;
+      min-height: 29px;
+      height: 29px;
+    }
+
+    .c32 {
+      z-index: 31;
+      pointer-events: auto;
+    }
+
+    .f6 {
+      font-family: ABeeZee;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: underline;
+      text-transform: none;
+      color: #b8c8d2;
+      background-color: initial;
+      line-height: 28px;
+      letter-spacing: 0.7px;
+      text-shadow: none;
+    }
+  </style>
+  <link as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" href="css/site.20200514140507.css" />
+  <noscript>
+    <link rel="stylesheet" href="css/site.20200514140507.css" /></noscript>
+  <!--[if lte IE 7]>
+      <link
+        rel="stylesheet"
+        href="css/site.20200514140507-lteIE7.css"
+        type="text/css"
+      />
+    <![endif]-->
+  <script>
+    !(function (t) {
+      var e = !1;
+      try {
+        e = t.document.createElement("link").relList.supports("preload");
+      } catch (t) { }
+      if (!e)
+        for (
+          var n = t.document.getElementsByTagName("link"), a = 0;
+          a < n.length;
+          a++
+        ) {
+          var o = n[a];
+          "preload" === o.rel &&
+            "style" === o.getAttribute("as") &&
+            (function (t) {
+              function e() {
+                if (!t.getAttribute("data-l")) {
+                  t.setAttribute("data-l", !0),
+                    t.addEventListener
+                      ? t.removeEventListener("load", e)
+                      : t.attachEvent && t.detachEvent("onload", e),
+                    t.setAttribute("onload", null),
+                    (t.media = "all");
+                  var n = window.location.hash;
+                  n.length > 1 &&
+                    setTimeout(function () {
+                      var t = document.querySelectorAll(
+                        '[name="' + n.slice(1) + '"]'
+                      )[0],
+                        e = 0;
+                      if (t.offsetParent)
+                        do {
+                          e += t.offsetTop;
+                        } while ((t = t.offsetParent));
+                      window.scrollTo(0, e);
+                    }, 100);
+                }
+              }
+              t.addEventListener
+                ? t.addEventListener("load", e)
+                : t.attachEvent && t.attachEvent("onload", e),
+                setTimeout(function () {
+                  (t.rel = "stylesheet"), (t.media = "nl x");
+                }),
+                setTimeout(e, 3e3);
+            })(o);
+        }
+    })(this);
+  </script>
+</head>
+
+<body id="b">
+  <div class="v ps s c"></div>
+  <div class="ps2 v2 s2">
+    <div class="v3 ps3 s3 c2">
+      <h1 class="p f">Price for the unit</h1>
+    </div>
+    <div class="v ps3 s4 c3">
+      <div class="v3 ps4 s5 c4">
+        <p class="p f2">Price</p>
+      </div>
+      <div class="v ps5 s6 w">
+        <div class="v ps6 s7 c3">
+          <div class="v3 ps4 s8 c5">
+            <p class="p f2">Quantity</p>
+          </div>
+          <div class="v3 ps7 s9 c6">
+            <p class="p f2">REAL&nbsp;&nbsp;PRICE</p>
+          </div>
+        </div>
+        <div class="v ps8 s10 c7"></div>
+      </div>
+    </div>
+    <div class="v ps9 s11 c8">
+      <div class="v ps10 s12 c3">
+        <div class="v ps11 s13 w">
+          <div class="v3 ps4 s14 c9">
+            <p class="p f3">1</p>
+          </div>
+          <div class="v3 ps12 s14 c10">
+            <p class="p f3">2</p>
+          </div>
+          <div class="v3 ps12 s14 c11">
+            <p class="p f3">3</p>
+          </div>
+          <div class="v3 ps13 s14 c12">
+            <p class="p f3">4</p>
+          </div>
+        </div>
+        <div class="v ps14 s15 w">
+          <div class="v ps4 s16 c13">
+            <input type="number" placeholder="Price1" name="Price1" class="input" id="price1" />
+          </div>
+          <div class="v ps15 s17 c14">
+            <input type="number" placeholder="Price2" name="Price2" class="input" id="price2" />
+          </div>
+          <div class="v ps16 s17 c15">
+            <input type="number" placeholder="Price3" name="Price3" class="input" id="price3" />
+          </div>
+          <div class="v ps12 s17 c16">
+            <input type="number" placeholder="Price4" name="Price4" class="input" id="price4" />
+          </div>
+        </div>
+        <div class="v ps17 s18 w">
+          <div class="v ps4 s16 c17">
+            <input type="number" placeholder="kg/L/..." name="q1" class="input" id="q1" />
+          </div>
+          <div class="v ps18 s16 c18">
+            <input type="number" placeholder="kg/L/..." name="q2" class="input" id="q2" />
+          </div>
+          <div class="v ps19 s16 c19">
+            <input type="number" placeholder="kg/L/..." name="q3" class="input" id="q3" />
+          </div>
+          <div class="v ps15 s16 c20">
+            <input type="number" placeholder="kg/L/..." name="q4" class="input" id="q4" />
+          </div>
+        </div>
+        <div class="v ps20 s19 c21"></div>
+        <div class="v ps21 s20 w">
+          <div class="v3 ps22 s21 c22">
+            <p class="p f4" id="res1">res1</p>
+          </div>
+          <div class="v ps23 s22 c23"></div>
+          <div class="v ps24 s23 c3">
+            <div class="v ps4 s23 w">
+              <div class="v3 ps22 s21 c24">
+                <p class="p f4" id="res2">res2</p>
+              </div>
+              <div class="v ps23 s22 c25"></div>
+            </div>
+          </div>
+          <div class="v ps24 s23 c3">
+            <div class="v ps4 s23 w">
+              <div class="v3 ps25 s21 c26">
+                <p class="p f4" id="res3">res3</p>
+              </div>
+              <div class="v ps23 s22 c27"></div>
+            </div>
+          </div>
+          <div class="v ps26 s23 c3">
+            <div class="v ps4 s23 w">
+              <div class="v3 ps25 s21 c28">
+                <p class="p f4" id="res4">res4</p>
+              </div>
+              <div class="v ps23 s22 c29"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="v4 ps27 s24 c30">
+        <p class="f5" id="btn-reset">Reset</p>
+      </div>
+    </div>
+  </div>
+  <div class="v ps28 s25 c31">
+    <div class="ps29 v2 s26">
+      <div class="v3 ps30 s27 c32">
+        <p class="p">
+          <span class="f6"><a href="javascript:em1();">Contact</a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+  <script>
+    !(function () {
+      var s = ["js/jquery.js", "js/index.20200514140507.js"],
+        n = {},
+        j = 0,
+        e = function (e) {
+          var o = new XMLHttpRequest();
+          o.open("GET", s[e], !0),
+            (o.onload = function () {
+              if (((n[e] = o.responseText), 2 == ++j))
+                for (var t in s) {
+                  var i = document.createElement("script");
+                  (i.textContent = n[t]), document.body.appendChild(i);
+                }
+            }),
+            o.send();
+        };
+      for (var o in s) e(o);
+    })();
+  </script>
+  <script type="text/javascript">
+    var ver = RegExp(/Mozilla\/5\.0 \(Linux; .; Android ([\d.]+)/).exec(
+      navigator.userAgent
+    );
+    if (ver && parseFloat(ver[1]) < 5) {
+      document.getElementsByTagName("body")[0].className += " whitespacefix";
+    }
+  </script>
+</body>
+
+</html>
