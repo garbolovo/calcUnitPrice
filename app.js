@@ -30,7 +30,7 @@ button.addEventListener("click", function (e) {
   function resetData(data) {
     data.forEach((dataItem) => {
       dataItem.textContent = "";
-      if ((dataItem.tagName = "INPUT")) {
+      if (dataItem.tagName === "INPUT") {
         dataItem.value = "";
       }
     });
