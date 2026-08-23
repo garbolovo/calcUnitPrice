@@ -25,12 +25,16 @@ let pricesEls = [price1, price2, price3, price4];
 let qEls = [q1El, q2El, q3El, q4El];
 let resultsEls = [res1El, res2El, res3El, res4El];
 
+function parseLocaleNumber(el) {
+  return parseFloat(String(el.value).replace(",", "."));
+}
+
 //buttonHandler -reset action
 button.addEventListener("click", function (e) {
   function resetData(data) {
     data.forEach((dataItem) => {
       dataItem.textContent = "";
-      if ((dataItem.tagName = "INPUT")) {
+      if (dataItem.tagName === "INPUT") {
         dataItem.value = "";
       }
     });
@@ -45,10 +49,8 @@ qEls.forEach((q, index) => {
   q.addEventListener("keyup", function (e) {
     resultsEls.forEach((r, i) => {
       if (index === i) {
-        r.textContent =
-          String(pricesEls[i].valueAsNumber / e.target.valueAsNumber) == "NaN"
-            ? 0
-            : (pricesEls[i].valueAsNumber / e.target.valueAsNumber).toFixed(2);
+        const result = parseLocaleNumber(pricesEls[i]) / parseLocaleNumber(e.target);
+        r.textContent = isNaN(result) ? 0 : result.toFixed(2);
       }
     });
   });
@@ -58,10 +60,8 @@ pricesEls.forEach((product, index) => {
   product.addEventListener("keyup", function (e) {
     resultsEls.forEach((r, i) => {
       if (index === i) {
-        r.textContent =
-          String(e.target.valueAsNumber / qEls[i].valueAsNumber) == "NaN"
-            ? 0
-            : (e.target.valueAsNumber / qEls[i].valueAsNumber).toFixed(2);
+        const result = parseLocaleNumber(e.target) / parseLocaleNumber(qEls[i]);
+        r.textContent = isNaN(result) ? 0 : result.toFixed(2);
       }
     });
   });
