@@ -29,6 +29,17 @@ function parseLocaleNumber(el) {
   return parseFloat(String(el.value).replace(",", "."));
 }
 
+//highlights the cheapest valid result among the rows
+function highlightBest() {
+  const values = resultsEls.map((r) => parseFloat(r.textContent));
+  const validValues = values.filter((v) => !isNaN(v) && v > 0);
+  const best = validValues.length ? Math.min(...validValues) : null;
+
+  resultsEls.forEach((r, i) => {
+    r.classList.toggle("best", best !== null && values[i] === best);
+  });
+}
+
 //buttonHandler -reset action
 button.addEventListener("click", function (e) {
   function resetData(data) {
@@ -43,6 +54,7 @@ button.addEventListener("click", function (e) {
   resetData(pricesEls);
   resetData(qEls);
   resetData(resultsEls);
+  highlightBest();
 });
 
 qEls.forEach((q, index) => {
@@ -53,6 +65,7 @@ qEls.forEach((q, index) => {
         r.textContent = isNaN(result) ? 0 : result.toFixed(2);
       }
     });
+    highlightBest();
   });
 });
 
@@ -64,5 +77,6 @@ pricesEls.forEach((product, index) => {
         r.textContent = isNaN(result) ? 0 : result.toFixed(2);
       }
     });
+    highlightBest();
   });
 });
