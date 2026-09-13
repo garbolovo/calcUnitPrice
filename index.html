@@ -260,30 +260,11 @@
   </main>
 
   <footer>
-    <a href="javascript:em1();">Contact</a>
+    <a href="#" id="contact-link">Contact</a>
   </footer>
 
   <script src="./js/app.js"></script>
-  <script>
-    !(function () {
-      var s = ["js/jquery.js", "js/index.20200514140507.js"],
-        n = {},
-        j = 0,
-        e = function (e) {
-          var o = new XMLHttpRequest();
-          o.open("GET", s[e], !0),
-            (o.onload = function () {
-              if (((n[e] = o.responseText), 2 == ++j))
-                for (var t in s) {
-                  var i = document.createElement("script");
-                  (i.textContent = n[t]), document.body.appendChild(i);
-                }
-            }),
-            o.send();
-        };
-      for (var o in s) e(o);
-    })();
-  </script>
+  <script src="./js/contact.js"></script>
 </body>
 
 </html>
